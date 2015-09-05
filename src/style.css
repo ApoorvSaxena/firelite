@@ -1,0 +1,103 @@
+body {
+    background-color: #000;
+    cursor: none;
+    overflow: hidden;
+}
+.player {
+    position: absolute;
+    z-index: 1;
+    width: 5px;
+    height: 5px;
+    animation-name: flicker;
+    animation-duration:3ms;
+    animation-delay:200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flicker{
+  0%   {transform: rotate(-1deg);}
+  20%  {transform: rotate(1deg);}
+  40%  {transform: rotate(-1deg);}
+  60%  {transform: rotate(1deg) scaleY(1.04);}
+  80%  {transform: rotate(-2deg) scaleY(0.92);}
+  100% {transform: rotate(1deg);}
+}
+
+.flame{
+  width: inherit;
+  height: inherit;
+  position:absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform:rotate(-45deg);
+}
+
+.yellow{
+  background:gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+
+.orange{
+  background:orange;
+  box-shadow: 0px 0px 9px 4px orange;
+}
+
+.red{
+  background:OrangeRed;
+  box-shadow: 0px 0px 5px 4px OrangeRed;
+}
+
+.white{
+  background:white;
+  box-shadow: 0px 0px 9px 4px white;
+}
+
+.food {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+}
+.enemy {
+    position: absolute;
+    border-radius: 50%;
+}
+.hidden {
+    display: none;
+}
+.game-over {
+    text-align: center;
+    color: #fff;
+    font-size: 100px;
+    z-index: 10;
+    margin-top: 15%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+.game-vw {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.score {
+  right: 10px;
+  position: absolute;
+  padding: 10px;
+  font-size: 25px;
+  background-color: #9a81ec;
+  opacity: 0.8;
+  border-radius: 10px;
+  z-index: 1;
+  color: #fff;
+}
+.replay--text {
+  font-size: 27px;
+  display: block;
+  margin-top: 30px;
+  color: #d7ffff;
+}
